@@ -1,0 +1,92 @@
+% PREAMBULO PARA CONFERENCE
+
+%%%%%%%%%%  GENERAL %%%%%%%%
+\usepackage[spanish,es-sloppy]{babel}   % Language definition
+\usepackage[utf8]{inputenc}             % Support encoding
+\usepackage[T1]{fontenc}                % Support encoding
+% \usepackage{times}
+\usepackage[scaled]{helvet}             % Arial-like font
+\renewcommand*{\familydefault}{\sfdefault}
+
+\usepackage{textcomp}                   % With LaTex, but it's not necessary
+
+%%%%%%%%%%  MATHEMATICS %%%%%%%%
+\usepackage{mathtools,amsthm,amssymb}  %  Enhanced amsmath, symbol, theorems
+
+%%%%%%%%%%  QUOTES AND QUOTING %%%%%%%%
+\usepackage[autostyle=true]{csquotes} % Generate language-dependent quotes in the bibliography
+
+%%%%%%%%%%  CITATIONS %%%%%%%%%%%%%%%
+% \usepackage[backend=biber,  style=apa]{biblatex}    % Load bibliography
+% \addbibresource{<++>.bib}
+
+%%%%%%%%%%  LIST %%%%%%%%%%%%%%%%%%%%
+\usepackage{enumitem}                 % Loads enumerate, itemize, description
+
+%%%%%%%%%%  TABLES %%%%%%%%%%%%%%%%%%%%
+\usepackage{array}                 % Tabular environment
+
+%%%%%%%%%%  FLOATS %%%%%%%%%%%%%%%%%%%%
+\usepackage{float}                % For option [H], force to put.
+\usepackage{subcaption}           % Subfigures, subtables, subcaption
+
+%%%%%%%%%%  IMAGES AND COLOUR %%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}     
+\DeclareGraphicsExtensions{.jpg,.jpeg,.png,.eps,.ps,.pdf}
+\graphicspath{{imagenes/}}
+
+\usepackage{xcolor}                % For colour
+
+%%%%%%%%%%  DEFINE FOR THE AUTOR %%%%%%%%%%%%%%%%%%%%
+
+%%%%% COLOURS
+\definecolor{granate}{RGB}{113,22,16}
+\definecolor{gris}{RGB}{154,153,157}
+\definecolor{arena}{RGB}{230,217,170}
+\definecolor{azul}{rgb}{0.03, 0.15, 0.4}
+\definecolor{negro}{rgb}{0, 0, 0}
+
+%%%%%%%%%%  HYPERLINKS %%%%%%%%%%%%%%%%%%%%
+\usepackage[final]{hyperref} % para agregar hiper vínculos en el PDF generado
+\hypersetup{
+	colorlinks=true,       % false: boxed links; true: colored links
+	linkcolor=azul,        % color of internal links
+	citecolor=azul,        % color of links to bibliography
+	filecolor=magenta,     % color of file links
+	urlcolor=azul         
+}
+
+\newcommand\N{\ensuremath{\mathbb{N}}}
+\newcommand\R{\ensuremath{\mathbb{R}}}
+\newcommand\Z{\ensuremath{\mathbb{Z}}}
+\renewcommand\O{\ensuremath{\emptyset}}
+\newcommand\Q{\ensuremath{\mathbb{Q}}}
+\newcommand\C{\ensuremath{\mathbb{C}}}
+
+% Define shortcuts
+\let\implies\Rightarrow
+\let\impliedby\Leftarrow
+\let\iff\Leftrightarrow
+\let\epsilon\varepsilon
+
+%%%%% THEOREMS
+\DeclareMathOperator{\sen}{sen}
+
+\newtheorem{obs}{Observación}[section]
+
+\theoremstyle{definition}
+% Aqui defino entronos de teoremas y demostraciones
+\newtheorem{defi}{Definicion}[section]
+\newtheorem{prop}{Proposicion}[section]
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{col}{Corolario}[section]
+\newtheorem{lema}{Lema}[section]
+
+%%%%% TITLE
+\title{\titulo}
+
+\author{\IEEEauthorblockN{\autor}
+\IEEEauthorblockA{  Curso IF471 B - Sistemas Digitales \\ Facultad de Ciencias,\\
+Universidad Nacional de Ingeniería\\
+\url{cpezor@uni.pe}}
+}

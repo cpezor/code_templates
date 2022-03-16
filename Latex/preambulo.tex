@@ -1,0 +1,99 @@
+% PREAMBULO PARA TRANSMAG
+
+%%%%%%%%%%  GENERAL %%%%%%%%
+\usepackage[spanish,es-sloppy]{babel}   % Language definition
+\usepackage[utf8]{inputenc}             % Support encoding
+\usepackage[T1]{fontenc}                % Support encoding
+
+\usepackage{textcomp}                   % With LaTex, but it's not necessary
+
+%%%%%%%%%%  MATHEMATICS %%%%%%%%
+\usepackage{mathtools,amsthm,amssymb}  %  Enhanced amsmath, symbol, theorems
+
+%%%%%%%%%%  QUOTES AND QUOTING %%%%%%%%
+\usepackage[autostyle=true]{csquotes} % Generate language-dependent quotes in the bibliography
+
+%%%%%%%%%%  CITATIONS %%%%%%%%%%%%%%%
+% Bibtex IEEEtran
+\usepackage{fancyref}                 % Cross-refrences
+
+%%%%%%%%%%  LIST %%%%%%%%%%%%%%%%%%%%
+\usepackage{enumitem}                 % Loads enumerate, itemize, description
+
+%%%%%%%%%%  TABLES %%%%%%%%%%%%%%%%%%%%
+\usepackage{array}                 % Tabular environment
+
+%%%%%%%%%%  FLOATS %%%%%%%%%%%%%%%%%%%%
+\usepackage{float}                % For option [H], force to put.
+\usepackage{subcaption}           % Subfigures, subtables, subcaption
+
+%%%%%%%%%%  IMAGES AND COLOUR %%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}     
+\DeclareGraphicsExtensions{.jpg,.jpeg,.png,.eps,.ps,.pdf}
+\graphicspath{{imagenes/}}
+
+\usepackage{xcolor}                % For colour
+
+%%%%%%%%%%  DEFINE FOR THE AUTOR %%%%%%%%%%%%%%%%%%%%
+
+%%%%% COLOURS
+\definecolor{granate}{RGB}{113,22,16}
+\definecolor{gris}{RGB}{154,153,157}
+\definecolor{arena}{RGB}{230,217,170}
+\definecolor{azul}{rgb}{0.03, 0.15, 0.4}
+\definecolor{negro}{rgb}{0, 0, 0}
+
+%%%%%%%%%%  HYPERLINKS %%%%%%%%%%%%%%%%%%%%
+\usepackage[final]{hyperref} % para agregar hiper vínculos en el PDF generado
+\hypersetup{
+	colorlinks=true,       % false: boxed links; true: colored links
+	linkcolor=azul,        % color of internal links
+	citecolor=azul,        % color of links to bibliography
+	filecolor=magenta,     % color of file links
+	urlcolor=azul         
+}
+
+\newcommand\N{\ensuremath{\mathbb{N}}}
+\newcommand\R{\ensuremath{\mathbb{R}}}
+\newcommand\Z{\ensuremath{\mathbb{Z}}}
+% \renewcommand\O{\ensuremath{\emptyset}}
+\newcommand\Q{\ensuremath{\mathbb{Q}}}
+\newcommand\C{\ensuremath{\mathbb{C}}}
+
+% Define shortcuts
+\let\implies\Rightarrow
+\let\impliedby\Leftarrow
+\let\iff\Leftrightarrow
+\let\epsilon\varepsilon
+
+%%%%% THEOREMS
+\DeclareMathOperator{\sen}{sen}
+
+\newtheorem{obs}{Observación}[section]
+
+\theoremstyle{definition}
+% Aqui defino entronos de teoremas y demostraciones
+\newtheorem{defi}{Definición}[section]
+\newtheorem{prop}{Proposición}[section]
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{col}{Corolario}[section]
+\newtheorem{lema}{Lema}[section]
+
+%%%%% TITLE
+\title{\titulo}
+
+\author{\IEEEauthorblockN{Cesar Pezo Roel\IEEEauthorrefmark{1}}
+
+\IEEEauthorblockA{Escuela profesional de Física, Universidad Nacional de Ingeniería, Lima, Perú
+}%
+\thanks{\IEEEauthorrefmark{1}\url{cpezor@uni.pe}}%
+}
+
+\newcommand{\subparagraph}{} %
+
+% For parskiping only paragraph, section and others still the same spacing
+\usepackage{titlesec}
+\titlespacing{\section}{0pt}{2.0ex plus .5ex minus .2ex}{\dimexpr1.0ex-6pt plus .2ex}
+\titlespacing{\subsection}{0pt}{2.0ex plus .5ex minus .2ex}{\dimexpr1.0ex-6pt plus .2ex}
+\titlespacing{\subsubsection}{0pt}{\dimexpr2.0ex-6pt plus .5ex minus .1ex}{0pt}
+

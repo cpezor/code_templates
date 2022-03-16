@@ -1,0 +1,195 @@
+% Plantilla para la preparación de los artículo para JITEL 2019
+
+\newcommand{\CLASSINPUTinnersidemargin}{18mm}
+\newcommand{\CLASSINPUToutersidemargin}{12mm}
+\newcommand{\CLASSINPUTtoptextmargin}{20mm}
+\newcommand{\CLASSINPUTbottomtextmargin}{25mm}
+\documentclass[10pt,conference, twoside,a4paper]{IEEEtran}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Para que salgan las tildes y demás caracteres en castellano...
+\usepackage[latin1]{inputenc}
+
+% o bien
+%\usepackage[utf8]{inputenc}
+
+% Fuente Times...
+\usepackage{times}
+
+
+% Figuras en formato .png, .ps, pdf o eps
+\usepackage{graphicx}
+\usepackage{subfigure}
+\DeclareGraphicsExtensions{.png,.eps,.ps,.pdf}
+
+\usepackage{fancyhdr}
+\usepackage{kantlipsum}
+
+% Formato y tipografía de URL, direcciones de correo...
+\usepackage{url}
+
+%Page margins
+\usepackage[left=2cm,top=2.5cm,right=2cm, bottom=2.5cm]{geometry}
+
+\usepackage[usenames]{color}
+
+\fancyhf{}
+
+% Encabezado paginas pares. 
+% Escribir el apellido de los autores, separados por comas: Apellido1, Apellido2,Apellido3, 2019.
+\fancyhead[CE]{\makebox(0,0)[c]{\it Apellido1, Apellido2, Apellido3, 2019.}}
+
+
+% Encabezado paginas impares. 
+% Escribir el título del articulo aqui.
+\fancyhead[CO]{\makebox(0,0)[c]{\it Preparación artículos XIV Jornadas de Ingeniería Telemática}}
+
+
+% Pie de pagina para páginas pares e impares, excepto portada. 
+\fancyfoot[C]{\footnotesize\usefont{T1}{phv}{m}{} This work is licensed under a \underline{\textcolor{blue}{Creative Commons 4.0 International License}} (CC BY-NC-ND 4.0)\\ EDITORIAL UNIVERSIDAD DE ZARAGOZA}    %%% change C to L or R as needed
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\pagestyle{fancy}
+
+
+\usepackage{eso-pic}
+
+\begin{document}
+\AddToShipoutPictureBG*{%
+  \AtPageUpperLeft{%
+    \setlength\unitlength{1in}%
+ 	\hspace{2cm}%% 
+ 	 	\makebox(0,-2)[l]{%Encabezado página principal
+			\begin{tabular}{l r} 
+			\multicolumn{1}{p{12cm}}{\vspace{-0.3cm}\includegraphics[scale=0.50]{logo.png}} & 						\multicolumn{1}{p{4cm}}{\raggedleft\small\usefont{T1}{phv}{m}{it} Actas de las XIV Jornadas de Ingeniería Telemática\\ (JITEL 2019),\\ Zaragoza (España), \\22-24 de octubre de 2019.} \tabularnewline 
+			 & \small\usefont{T1}{phv}{m}{} ISBN: X-XXXX-XX-XXX-X\\
+			 & \small\usefont{T1}{phv}{m}{} DOI: XXXXXX\\ 
+			\end{tabular}
+ }
+}}
+
+\AddToShipoutPictureBG*{%
+  \AtPageLowerLeft{%
+    \setlength\unitlength{1in}%
+    \hspace*{\dimexpr0.5\paperwidth\relax}% Pie de página de la página principal.
+    \makebox(0,1.3)[c]{\footnotesize\usefont{T1}{phv}{m}{} This work is licensed under a \underline{\textcolor{blue}{Creative Commons 4.0 International License}} (CC BY-NC-ND 4.0)}%
+    \makebox(0,1)[c]{\footnotesize\usefont{T1}{phv}{m}{} EDITORIAL UNIVERSIDAD DE ZARAGOZA}%
+
+
+}}
+
+
+% Título del artículo
+\title{\vspace{3cm}Preparación artículos XIV Jornadas de Ingeniería Telemática}
+
+% Datos de los autores
+\author{\authorblockN{Nombre del Primer Autor, Nombre del Segundo Autor, Nombre del Tercer Autor, etc.}
+\authorblockA{Departamento ...,\\
+Universidad ...\\
+Dirección Postal.\\
+Email del Primer Autor, Email del Segundo Autor, Email del Tercer Autor, etc.}
+}
+
+
+\maketitle
+
+\begin{abstract}
+Este documento presenta la plantilla para las XIV Jornadas de Ingeniería Telemática (JITEL 2019). El abstract de la comunicación debe contener entre 100 y 150 palabras. El tipo de letra es Times New Roman en negrita con tamaño 9 puntos, tal y como aparece en esta plantilla. No debe contener referencias ni ecuaciones numeradas. Se recomienda no emplear acrónimos en esta sección. Esta plantilla ha sido generada tomando como base el estándar de documentos IEEE. Por favor, utilice esta plantilla como formato base para el trabajo que desee enviar a JITEL 2019. Cualquier cuestión sobre el envío de los artículos debe dirigirse a la dirección electrónica del comité técnico del congreso (jitel2019@unizar.es). Para más información sobre la organización y desarrollo del congreso, se puede consultar la dirección: \url{http://jitel2019.i3a.es/}
+
+\end{abstract}
+
+\begin{keywords}
+% escribe aqui entre 5 y 7 palabras claves.
+jitel, telemática
+\end{keywords}
+
+
+\section{\uppercase{Introducción}}
+Esta plantilla puede encontrarse en el sitio web de las jornadas (\url{http://jitel2019.i3a.es/}). Este documento es un ejemplo del formato de presentación deseado. Contiene información relativa al diseño general del documento, tipo de letra y tamaños de tipografía apropiados. El cuerpo del artículo se escribirá en castellano o en inglés. Los artículos propuestos deben tener una longitud de 6 u 8 páginas. Los trabajos aceptados deberán ser presentados oralmente en las jornadas. Los miembros del CP (comité de programa) también pueden aceptar artículos con la condición de que sean convertidos a un formato corto de 4 páginas como máximo. Estos artículos se presentarían en formato póster y aparecerán igualmente en las actas de la conferencia. Este fichero debería servir como punto de partida para los artículos enviados a JITEL 2019 producidos con LATEX.
+
+En caso de dudas, contacte con la organización a través del siguiente correo electrónico \url{jitel2019@unizar.es}.
+
+
+\section{\uppercase{Formato y estilo}}
+
+Utilice tipografía Times New Roman. El tamaño para el cuerpo del texto es de 10 puntos y para el título del artículo 24 puntos. En el caso de artículos en castellano, y siguiendo las recomendaciones de la RAE, utilice las mayúsculas únicamente para la primera palabra del título y para los acrónimos y nombre propios. Utilice el formato DIN-A4 (21 x 29,7 cm), ajuste los márgenes superior e inferior a 2 y 2,5 cm respectivamente, el margen izquierdo a 1,8 cm y el derecho a 1,2 cm. El artículo deberá ir a dos columnas con un espaciado entre columnas de 0,42 cm. Justifique las columnas tanto a izquierda como a derecha. Los párrafos deberán ser escritos a espacio simple. No olvide definir cada acrónimo la primera vez que aparezca en el texto.
+
+
+
+\subsection{Figuras y tablas}
+
+El tamaño para los títulos de las tablas, figuras y notas al pie de página es de 8 puntos. Todas las figuras y tablas deben aparecer centradas en la columna (las figuras y tablas de gran tamaño podrán extenderse sobre ambas columnas). Evite ubicar las figuras y tablas en medio de las columnas, siendo preferible su ubicación en la parte superior de la página. Se aconseja que inserte la figura o la tabla, junto con su descripción, en un cuadro de texto, tal como se hace en este documento.
+
+La descripción de las figuras deberá ubicarse debajo de las mismas, centrada, numerándose con cifras arábigas. Use la abreviatura Fig. n tanto para etiquetar la figura o gráfico como para referirse a ella. La descripción de las tablas deberá ubicarse encima de ellas, centrada y con numeración romana. Emplee Tabla n tanto para etiquetar la tabla como para referirse a ella en el texto del documento.
+
+
+
+\begin{table}[bt]
+\centering
+\caption{Tabla de ejemplo.}
+\label{tab:tabla}
+\begin{tabular}{c c c c}
+\hline
+\hline
+ Protocolo & Escenario 1 & Escenario 2 & Escenario 3 \\
+\hline
+ $P_1$ & $0.1$ & $0.3$ & $0.2$ \\
+ $P_2$ & $0.2$ & $0.3$ & $0.5$ \\
+ $P_4$ & $0.2$ & $0.1$ & $0.2$ \\
+ $P_5$ & $0.3$ & $0.3$ & $0.5$ \\
+\hline
+\hline
+\end{tabular}
+\end{table}
+
+
+\subsection{Ecuaciones}
+
+Las ecuaciones deben estar centradas y situadas en líneas distintas. Deberá numerarse cada ecuación:
+\begin{equation}
+E = mc^2
+\label{eq:emc2}
+\end{equation}
+Para referenciar una ecuación, utilice Ec. \ref{eq:emc2}.
+
+\subsection{Numeración, pies y encabezados de páginas}
+
+No aplique ningún elemento de numeración, pie o encabezado de página. Estos elementos se añadirán en el proceso final de confección de las actas. Por favor, deje la numeración tal como está en el documento modelo. 
+
+\subsection{Referencias}
+
+Las referencias serán numeradas en orden de aparición \cite{Jitel2019}. El formato de referencias será el estándar del IEEE. Se muestra algún ejemplo en el apartado correspondiente.
+
+
+
+\subsection{Nombre y filiación de los autores}
+
+Según el número de autores, adapte la zona correspondiente al nombre y filiación de manera oportuna. Intente no variar de manera notable el aspecto y tamaño de la zona.
+
+
+
+\begin{figure}[tb]
+\centerline{
+\includegraphics[width=8.5cm]{logo-jitel-2019.eps}
+}
+\caption{Imagen de JITEL 2019.}
+\label{fig:protocols}
+\end{figure}
+
+\section{\uppercase{Conclusiones}}
+
+El seguimiento de las normas indicadas permitirá que su trabajo resulte visualmente atractivo. Esta misma plantilla se puede encontrar en formato Microsoft Word ®, en la dirección web oficial de las jornadas (\url{http://jitel2019.i3a.es/}).
+
+\section*{\uppercase{Agradecimientos}}
+
+Los agradecimientos deberán ubicarse al final del trabajo, justo antes de las referencias, en una sección sin numerar. 
+
+\bibliographystyle{IEEEtran}
+
+\begin{thebibliography}{99}
+\bibitem {Jitel2019} Julián Fernández-Navajas, "Ejemplo de bibliografía", En Actas de las XIV Jornadas de Ingeniería Telemática, vol. 1, n. 1, pp. 1-10, 2019.
+
+\end{thebibliography}
+\IEEEpeerreviewmaketitle
+
+\end{document}

@@ -1,0 +1,40 @@
+\documentclass[a4paper,oneside,openright,11pt]{book}
+
+\input{PREAMBULO.tex}
+% \input{simbolos.tex}
+
+
+% DEFINE
+\newcommand\autor{Cesar Alan Pezo Roel}
+\newcommand\asesor{Phd. Alejandro Daniel Paredes Cabrel }
+\newcommand\titulo{<++>}
+
+\title{\titulo}
+\author{\autor}
+
+\setlength{\parskip}{5 pt}
+\setlength{\parindent}{0cm}
+\begin{document}
+
+  % PREFACIO
+  \renewcommand{\thepage}{\roman{page}}
+  \input{CARATULA.tex}
+  \pagestyle{plain}
+  \setcounter{page}{0}
+  % \input{resumen.tex}
+  \tableofcontents
+  \addcontentsline{toc}{chapter}{Lista de figuras} % Content
+  \cleardoublepage
+
+  % MODULE
+  \renewcommand{\thepage}{\arabic{page}}
+  \setcounter{page}{1}
+  % \input{cap1.tex}
+  % \input{cap2.tex}
+  % \input{todo.tex}
+  % \input{conclusion.tex}
+
+  % \printbibliography
+
+
+\end{document}

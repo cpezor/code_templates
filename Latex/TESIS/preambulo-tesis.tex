@@ -1,0 +1,195 @@
+%%%%%%%%%%  GENERAL %%%%%%%%
+\usepackage[spanish,es-sloppy]{babel}   % Language definition
+\usepackage[utf8]{inputenc}             % Support encoding
+\usepackage[T1]{fontenc}                % Support font
+\usepackage[scaled]{helvet}             % Arial-like font
+\renewcommand*{\familydefault}{\sfdefault}
+
+\usepackage{textcomp}                   % With LaTex, but it's not necessary
+\usepackage{setspace}                   % Set spacing
+
+%%%%%%%%%%  LAYOUT %%%%%%%%
+\usepackage{geometry}   % Page dimensions
+ \geometry{
+ a4paper,
+ left=4 cm,
+ right=3 cm,
+ top=3 cm,
+ bottom=3.5 cm
+ }
+\usepackage{fancyhdr}                   % Custom headers/footers
+
+%%%%%%%%%%  MATHEMATICS %%%%%%%%
+\usepackage{mathtools,amsthm,amssymb}   %  Enhanced amsmath, symbol, theorems
+
+%%%%%%%%%%  QUOTES AND QUOTING %%%%%%%%
+\usepackage[autostyle=true]{csquotes}   % Generate language-dependent quotes in the bibliography
+
+%%%%%%%%%%  CITATIONS %%%%%%%%%%%%%%%
+% \usepackage[backend=biber,  style=apa]{biblatex}    % Load bibliography
+% \addbibresource{<++>.bib}
+
+%%%%%%%%%%  LIST %%%%%%%%%%%%%%%%%%%%
+\usepackage{enumitem}                   % Loads enumerate, itemize, description
+
+%%%%%%%%%%  TABLES %%%%%%%%%%%%%%%%%%%%
+\usepackage{array}                      % Tabular environment
+
+%%%%%%%%%%  FLOATS %%%%%%%%%%%%%%%%%%%%
+\usepackage{float}                      % For option [H], force to put.
+
+\usepackage{subcaption}                 % Subfigures, subtables, subcaption
+% \usepackage{floatrow}                 % Align sub-figures
+% \usepackage{roating}                  % Rotate floats
+
+%%%%%%%%%%  IMAGES AND COLOUR %%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}     
+\DeclareGraphicsExtensions{.jpg,.jpeg,.png,.eps,.ps,.pdf}
+\graphicspath{{imagenes/}}
+
+\usepackage[usenames,dvipsnames,svgnames]{xcolor}                % For colour
+\definecolor{granate}{RGB}{113,22,16}
+\definecolor{gris}{RGB}{154,153,157}
+\definecolor{arena}{RGB}{230,217,170}
+\definecolor{azul}{rgb}{0.03, 0.15, 0.4}
+\definecolor{negro}{rgb}{0, 0, 0}
+
+%%%%%%%%%%  HYPERLINKS %%%%%%%%%%%%%%%%%%%%
+\usepackage[final]{hyperref}  % para agregar hiper vínculos en el PDF generado
+\hypersetup{
+	colorlinks=true,            % false: boxed links; true: colored links
+	linkcolor=azul,             % color of internal links
+	citecolor=azul,             % color of links to bibliography
+	filecolor=magenta,          % color of file links
+	urlcolor=azul         
+}
+
+\usepackage[noabbrev]{cleveref}
+
+%%---------------------------------------
+
+\fancypagestyle{plain}{
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.5 pt}
+\renewcommand{\footrulewidth}{0.5 pt}
+
+
+\lhead[]{\textit{\scriptsize UNIVERSIDAD NACIONAL DE INGENIERÍA \\ \scriptsize {FACULTAD DE CIENCIAS}}}
+\rhead[]{\textit{\scriptsize \leftmark}}
+
+
+% \lfoot[]{\textit{\scriptsize {\titulo} \\ Bach. {\autor}}}
+\lfoot[]{\textit{\scriptsize {\titulo}} \\}
+\rfoot[]{\small \thepage}
+}
+%----------------------------------------------
+
+
+%%%%% TOC AND TIT
+\usepackage{titlesec}       % Titulos de SECCIONES
+\usepackage{tocloft}        % Titulos de ÍNDICES
+
+\setcounter{secnumdepth}{3} % Para que ponga 1.1.1.1 en subsubsecciones
+
+% Centrado del título del ÍNDICE / LISTA DE FIGURAS / LISTA DE CUADROS
+
+\renewcommand{\cfttoctitlefont}{\hfill \normalfont\normalsize\bfseries}
+\renewcommand{\cftaftertoctitle}{\hfill}
+
+\renewcommand{\cftlottitlefont}{\hfill\normalfont\normalsize\bfseries}
+\renewcommand{\cftafterlottitle}{\hfill}
+
+\renewcommand{\cftloftitlefont}{\hfill\normalfont\normalsize\bfseries}
+\renewcommand{\cftafterloftitle}{\hfill}
+
+
+% Formato de los CAPÍTULOS, SECCIONES Y SUBSECCIONES
+\titleformat{\chapter}[block]{\normalfont\normalsize\bfseries}{CAPÍTULO \thechapter:}{0.5em}{\normalsize}
+\titlespacing*{\chapter}{0pt}{-10 pt}{5pt}
+
+\titleformat{\section}[block]{\normalfont\normalsize}{\thesection}{0.5em}{\normalsize}
+\titlespacing*{\section}{0pt}{10 pt}{5 pt}
+
+\titleformat{\subsection}[block]{\normalfont\normalsize}{\thesubsection}{0.5em}{\normalsize}
+\titlespacing*{\subsection}{0pt}{10 pt}{5 pt}
+
+\titleformat{\subsubsection}[block]{\normalfont\normalsize}{\thesubsubsection}{0.5em}{\normalsize}
+\titlespacing*{\subsubsection}{0pt}{10 pt}{5 pt}
+
+% Posicionamiento vertical de TOC, LOT and LOF
+
+\setlength{\cftbeforelottitleskip}{1pt} 
+\renewcommand{\cftafterlottitleskip}{12pt}
+
+\setlength{\cftbeforeloftitleskip}{1pt} 
+\renewcommand{\cftafterloftitleskip}{12pt}
+
+\setlength{\cftbeforetoctitleskip}{16pt} 
+\renewcommand{\cftaftertoctitleskip}{12 pt}
+
+
+% Cambiando las etiquetas de las FIGURAS y TABLAS (Caption y autoref)
+\addto\captionsspanish{\renewcommand{\figurename}{\footnotesize FIGURA N°}}
+\addto\extrasspanish{\def\figureautorefname{ Figura N°}}
+ 
+\addto\captionsspanish{\renewcommand{\tablename}{\footnotesize TABLA N°}}
+\addto\extrasspanish{\def\tableautorefname{ Tabla N°}} 
+
+
+% Espaciamiento dentro del índice
+
+\setlength{\cftbeforechapskip}{2mm}
+\renewcommand\cftchapafterpnum{\vskip6pt}
+\renewcommand\cftsecafterpnum{\vskip5pt}
+\renewcommand\cftsubsecafterpnum{\vskip5pt}
+
+
+%Agregar la palabra CAPITULO al TOC, FIGURA a LOF y TABLA al LOT
+
+\renewcommand{\cftchappresnum}{CAPÍTULO }
+\renewcommand{\cftchapaftersnum}{:}
+\renewcommand{\cftchapnumwidth}{7em}
+
+\renewcommand{\cftfigpresnum}{Figura N° }
+%\renewcommand{\cftfigaftersnum}{:}
+\renewcommand{\cftfignumwidth}{6.85 em}
+
+\renewcommand{\cfttabpresnum}{Tabla N° }
+%\renewcommand{\cftfigaftersnum}{:}
+\renewcommand{\cfttabnumwidth}{6.5 em}
+
+
+%%%%%%%%%%  DEFINE FOR THE AUTOR %%%%%%%%%%%%%%%%%%%%
+
+%%%%% TOC
+\renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}} 
+\renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}  
+\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}  
+\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
+
+\newcommand\N{\ensuremath{\mathbb{N}}}
+\newcommand\R{\ensuremath{\mathbb{R}}}
+\newcommand\Z{\ensuremath{\mathbb{Z}}}
+\renewcommand\O{\ensuremath{\emptyset}}
+\newcommand\Q{\ensuremath{\mathbb{Q}}}
+\newcommand\C{\ensuremath{\mathbb{C}}}
+
+% Define shortcuts
+\let\implies\Rightarrow
+\let\impliedby\Leftarrow
+\let\iff\Leftrightarrow
+\let\epsilon\varepsilon
+
+%%%%% THEOREMS
+\DeclareMathOperator{\sen}{sen}
+
+\newtheorem{obs}{Observación}[section]
+
+\theoremstyle{definition}
+% Aqui defino entronos de teoremas y demostraciones
+\newtheorem{defi}{Definicion}[section]
+\newtheorem{prop}{Proposicion}[section]
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{col}{Corolario}[section]
+\newtheorem{lema}{Lema}[section]

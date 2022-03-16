@@ -1,0 +1,6 @@
+PROGRAM <++>
+
+  IMPLICIT NONE
+
+  <++>
+END PROGRAM
